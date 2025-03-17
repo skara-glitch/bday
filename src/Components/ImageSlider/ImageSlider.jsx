@@ -30,10 +30,20 @@ const image23 = "././23.jpg";
 const image24 = "././24.jpg";
 const image25 = "././25.jpg";
 const image26 = "././26.jpg";
+const image27 = "././27.jpeg";
+const image28 = "././28.jpeg";
+const image29 = "././29.jpeg";
+const image30 = "././30.jpeg";
+const image31 = "././31.jpeg";
+const image32 = "././32.jpeg";
+const image33 = "././33.jpeg";
+const image34 = "././34.jpeg";
+const image35 = "././35.jpeg";
+const image36 = "././36.jpeg";
 
 const imageArray = [image1,image2,image3,image4,image5,image6,image7,image8,image9,image10,image11,image12,image13,image14,image15,image16,image17,image18,image19,image20,
-    image21,image22,image23,image24,image25,image26];
-
+    image21,image22,image23,image24,image25,image26,image27,image28,image29,image31,image32,image33,image34,image35,image36];
+    console.log(imageArray.length)
 function ImageSlider() {
 
     const[midImage,setMidImage] = useState(0);
@@ -111,18 +121,21 @@ function ImageSlider() {
         </div>
         <div className="buttons">
             <button className="leftButton" onClick={()=>Decrement()}><IoIosArrowBack />
+
             </button>
             <button className="rightButton" onClick={()=>Increment()}><IoIosArrowBack />
             </button>
         </div>
-        {/* <div className="dotsPlace">
+        
+         <div className="dotsPlace">
         {
             imageArray.map((_,index)=>(
                 <div className={`dots ${index===midImage?'active':'passive'}`}></div>
             ))
         }
-        </div> */}
+        </div>
     </div>
+    
   )
 }
 
