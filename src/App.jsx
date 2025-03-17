@@ -2,6 +2,8 @@ import React from 'react'
 import ImageSlider from './Components/ImageSlider/ImageSlider'
 const icon = 'icon.jpg';
 const love = <img src={icon} height='50' ></img>
+const lav = <img src={icon} height='50' ></img>;
+import { count } from './Components/ImageSlider/ImageSlider';
 function App() {
 
 

@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import "./ImageSlider.css"
 import { IoIosArrowBack } from "react-icons/io";
 import gsap from 'gsap';
-
+export var count =1;
 
 const image1 = "././1.jpg";
 const image2 = "././2.jpg";
@@ -40,10 +40,10 @@ const image33 = "././33.jpeg";
 const image34 = "././34.jpeg";
 const image35 = "././35.jpeg";
 const image36 = "././36.jpeg";
+const image37 = "././37.jpg";
 
 const imageArray = [image1,image2,image3,image4,image5,image6,image7,image8,image9,image10,image11,image12,image13,image14,image15,image16,image17,image18,image19,image20,
-    image21,image22,image23,image24,image25,image26,image27,image28,image29,image31,image32,image33,image34,image35,image36];
-    console.log(imageArray.length)
+    image21,image22,image23,image24,image25,image26,image27,image28,image29,image30,image31,image32,image33,image34,image35,image36,image37];
 function ImageSlider() {
 
     const[midImage,setMidImage] = useState(0);
@@ -70,10 +70,13 @@ function ImageSlider() {
     const Increment=()=>{
         if(midImage == imageArray.length-1){
             setMidImage(0);
+            count = 1;
         }
         else{
             setMidImage(midImage+1);
+            count = count+1;
         }
+        console.log(count +"/" +imageArray.length)
         //----------------GSAP ANIMATIONS-------------------------
         gsap.fromTo('.middleImage',
             {x:-200,opacity:0,scale:0.6},
@@ -91,10 +94,13 @@ function ImageSlider() {
     const Decrement=()=>{
         if(midImage == 0){
             setMidImage(imageArray.length-1);
+            count = imageArray.length;
         }
         else{
             setMidImage(midImage-1);
+            count = count -1;
         }
+        console.log(count +"/" +imageArray.length)
         //----------------GSAP ANIMATIONS-------------------------
         gsap.fromTo('.middleImage',
             {x:200,opacity:0,scale:0.6},
