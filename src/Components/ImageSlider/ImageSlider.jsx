@@ -41,9 +41,12 @@ const image34 = "././34.jpeg";
 const image35 = "././35.jpeg";
 const image36 = "././36.jpeg";
 const image37 = "././37.jpg";
+const image38 = "././new1.jpg";
+const image39 = "././new2.jpg";
 
-const imageArray = [image1,image2,image3,image4,image5,image6,image7,image8,image9,image10,image11,image12,image13,image14,image15,image16,image17,image18,image19,image20,
-    image21,image22,image23,image24,image25,image26,image27,image28,image29,image30,image31,image32,image33,image34,image35,image36,image37];
+
+const imageArray = [image1,image2,image3,image38,image4,image5,image6,image7,image8,image9,image10,image11,image12,image13,image14,image15,image16,image17,image18,image19,image20,
+    image21,image22,image23,image24,image25,image26,image27,image28,image29,image30,image31,image32,image33,image34,image35,image36,image39,image37];
 function ImageSlider() {
 
     const[midImage,setMidImage] = useState(0);
